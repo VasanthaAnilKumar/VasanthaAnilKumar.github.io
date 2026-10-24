@@ -1,21 +1,543 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090e1d"><meta name="description" content="Anil Kumar Vasantha — Data Engineer portfolio and end-to-end data pipeline architecture."><title>Anil Kumar Vasantha | Data Engineer</title><style>
-:root{color-scheme:dark;--bg:#090e1d;--panel:#111a2d;--ink:#e9f1ff;--muted:#a5b4cb;--accent:#65e1db;--purple:#aa95ff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 78% 5%,#182a4b 0,transparent 37%),var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.wrap{width:min(1140px,calc(100% - 36px));margin:auto}header{position:sticky;top:0;z-index:10;background:#090e1df0;backdrop-filter:blur(14px);border-bottom:1px solid #263148}nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.logo{font-size:1.2rem;font-weight:850;letter-spacing:.03em}.logo span,.eyebrow,.gradient{color:var(--accent)}.links{display:flex;gap:19px;flex-wrap:wrap}.links a{font-size:.85rem;color:#c3d0e4}.links a:hover{color:var(--accent)}.hero{min-height:650px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:38px;padding:88px 0 70px}.eyebrow{font-size:.8rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}.hero h1{font-size:clamp(3.2rem,7.5vw,7rem);line-height:1;letter-spacing:-.075em;margin:16px 0 24px}.hero h1 .line{display:block}.hero h1 .line:last-child{background:linear-gradient(110deg,var(--accent),#8ab7ff,var(--purple));background-clip:text;color:transparent}.hero p{max-width:590px;color:var(--muted);font-size:1.07rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:12px 19px;border:1px solid #547285;border-radius:10px;font-weight:700;font-size:.9rem;background:transparent;color:var(--ink);cursor:pointer}.btn.primary{background:var(--accent);color:#071523;border-color:var(--accent)}.btn:hover{transform:translateY(-2px);transition:transform .2s}.visual{position:relative;min-height:365px;display:grid;place-items:center}.orb{width:min(310px,80vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#72f2e644,#365eaa22 50%,transparent 70%);border:1px solid #3c6578;box-shadow:0 0 90px #4ce6d51b,inset 0 0 80px #8e84ff1b;display:grid;place-items:center;animation:float 5s ease-in-out infinite}.orb span{font-size:5.8rem;font-weight:900;letter-spacing:-.09em;color:#a8f9f0;text-shadow:0 0 32px #43e4dc66}.sat{position:absolute;background:#17253d;border:1px solid #39556e;border-radius:12px;padding:9px 13px;font-size:.78rem;color:#b5f8ef}.sat.one{top:13%;right:0}.sat.two{bottom:16%;left:0}@keyframes float{50%{transform:translateY(-12px)}}section{padding:70px 0;scroll-margin-top:85px}.section-top{color:var(--accent);text-transform:uppercase;letter-spacing:.19em;font-size:.78rem;font-weight:800}.section-title{font-size:clamp(2rem,4vw,3rem);line-height:1.15;letter-spacing:-.035em;margin:10px 0 18px}.section-desc{color:var(--muted);max-width:760px}.stats,.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.card,.stat,.timeline-item{border:1px solid #27374f;background:linear-gradient(145deg,#142039,#10182a);border-radius:17px;padding:25px}.stat strong{display:block;color:var(--accent);font-size:1.9rem}.stat span,.card p,.timeline-item p{color:var(--muted)}.card h3{margin:10px 0;font-size:1.17rem}.chipset{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.chip{border:1px solid #344860;border-radius:100px;padding:6px 12px;font-size:.8rem;color:#c9def4;background:#16243a}.icon{font-size:1.7rem}.timeline{display:grid;gap:16px;margin-top:28px}.timeline-item{border-left:3px solid var(--accent)}.timeline-item h3{margin:0}.tag{font-size:.78rem;color:var(--accent);font-weight:700;letter-spacing:.05em}.note{color:#9facbf;font-size:.88rem}.contact{background:linear-gradient(110deg,#182b48,#13243a);border:1px solid #2a5365;border-radius:22px;padding:38px;margin-top:24px}footer{padding:30px 0 45px;border-top:1px solid #243047;color:#9baac2;font-size:.85rem;text-align:center}.architecture{margin-top:30px;padding:26px;border:1px solid #2c4560;border-radius:22px;background:radial-gradient(circle at 50% 0,#1a3354,#0f192b 72%);overflow:hidden}.flowgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:9px;align-items:stretch}.flowstep{position:relative;border:1px solid #36516b;background:#172740;border-radius:13px;padding:18px 10px;text-align:center;min-width:0}.flowstep:not(:last-child):after{content:'›';position:absolute;right:-10px;top:38%;z-index:1;color:var(--accent);font-size:1.35rem;font-weight:900}.flowstep svg{width:40px;height:40px;stroke:var(--accent);stroke-width:1.65;fill:none;stroke-linecap:round;stroke-linejoin:round}.flowstep strong{display:block;margin-top:8px;font-size:.82rem}.flowstep small{display:block;color:var(--muted);font-size:.69rem;line-height:1.4;margin-top:5px}.archfooter{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-top:20px;color:#91a7c4;font-size:.78rem}.architecture .pulse{display:inline-block;width:8px;height:8px;background:#65e1db;border-radius:50%;margin-right:6px;box-shadow:0 0 12px #65e1db}.feature{border:1px solid #334a67;border-radius:18px;padding:23px;background:linear-gradient(130deg,#182a43,#111b30);margin-top:22px}.feature h3{margin:0 0 8px}.feature p{margin:0;color:var(--muted)}.empty{color:#9facbf;border:1px dashed #334960;border-radius:13px;padding:18px;margin-top:14px}.editor{display:none;background:#0d1729;border:1px solid #3e6073;border-radius:18px;padding:24px;margin:25px 0}.editor.open{display:block}.editor h2{margin-top:0}.editor label{display:block;margin:12px 0 5px;font-size:.86rem;color:#cbdaf0}.editor input,.editor textarea{display:block;width:100%;padding:10px;border:1px solid #39516c;background:#101e33;color:white;border-radius:9px}.editor textarea{min-height:110px;resize:vertical}.editor .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.editor .actions{margin-top:18px}.editor .helper{font-size:.8rem;color:#a5b4cb}.tiny{font-size:.78rem;color:#9facbf}.pill{display:inline-flex;align-items:center;gap:6px;border:1px solid #36516b;border-radius:100px;padding:5px 10px;font-size:.74rem;color:#bceeea;background:#102b37}.mobile-toggle{display:none}#certList .card{min-height:120px}@media(max-width:860px){.flowgrid{grid-template-columns:repeat(3,minmax(0,1fr))}.flowstep:nth-child(3):after{display:none}.hero{grid-template-columns:1fr;gap:8px}.visual{min-height:300px}.orb{width:250px}.orb span{font-size:4.7rem}}@media(max-width:620px){nav{align-items:flex-start;flex-wrap:wrap;padding:14px 0}.mobile-toggle{display:block;margin-left:auto;background:#16243a;color:white;border:1px solid #39516c;border-radius:8px;padding:6px 10px}.links{display:none;width:100%;padding-bottom:9px}.links.show{display:flex;flex-direction:column;gap:12px}.hero{padding:60px 0 30px;min-height:auto}.hero h1{font-size:clamp(3.1rem,12vw,5rem)}.stats,.cards{grid-template-columns:1fr}.flowgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.flowstep:nth-child(3):after{display:block}.flowstep:nth-child(even):after{display:none}.architecture{padding:15px}.editor .row{grid-template-columns:1fr}section{padding:50px 0}.contact{padding:23px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
-</style></head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0VXP30SFGG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-0VXP30SFGG');
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090e1d">
+<meta name="description" content="Anil Kumar Vasantha | Data Engineer Portfolio">
+<title>Anil Kumar Vasantha | Data Engineer</title>
+
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#090e1d;
+  --panel:#111a2d;
+  --ink:#e9f1ff;
+  --muted:#a5b4cb;
+  --accent:#65e1db;
+  --purple:#aa95ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:radial-gradient(ellipse at 78% 5%,#182a4b,transparent 37%),var(--bg);
+  color:var(--ink);
+  font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif;
+}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{
+  outline:3px solid var(--accent);outline-offset:3px;
+}
+.wrap{width:min(1140px,calc(100% - 36px));margin:auto}
+header{
+  position:sticky;top:0;z-index:10;
+  background:#090e1df0;
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid #263148;
+}
+nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-size:1.2rem;font-weight:850}
+.logo span,.eyebrow{color:var(--accent)}
+.links{display:flex;gap:19px;flex-wrap:wrap}
+.links a{font-size:.85rem;color:#c3d0e4}
+.links a:hover{color:var(--accent)}
+.mobile-toggle{display:none}
+.hero{
+  min-height:650px;
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  align-items:center;
+  gap:38px;
+  padding:88px 0 70px;
+}
+.eyebrow{font-size:.8rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.hero h1{
+  font-size:clamp(3.2rem,7.5vw,7rem);
+  line-height:1;
+  letter-spacing:-.075em;
+  margin:16px 0 24px;
+}
+.hero h1 .line{display:block}
+.hero h1 .line:last-child{
+  background:linear-gradient(110deg,var(--accent),#8ab7ff,var(--purple));
+  background-clip:text;color:transparent;
+}
+.hero p{max-width:590px;color:var(--muted);font-size:1.07rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{
+  display:inline-block;padding:12px 19px;
+  border:1px solid #547285;border-radius:10px;
+  font-weight:700;font-size:.9rem;
+  background:transparent;color:var(--ink);
+}
+.btn.primary{background:var(--accent);color:#071523;border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px);transition:transform .2s}
+.visual{position:relative;min-height:365px;display:grid;place-items:center}
+.orb{
+  width:min(310px,80vw);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#72f2e644,#365eaa22 50%,transparent 70%);
+  border:1px solid #3c6578;
+  box-shadow:0 0 90px #4ce6d51b,inset 0 0 80px #8e84ff1b;
+  display:grid;place-items:center;
+  animation:float 5s ease-in-out infinite;
+}
+.orb span{font-size:5.8rem;font-weight:900;letter-spacing:-.09em;color:#a8f9f0}
+.sat{
+  position:absolute;background:#17253d;
+  border:1px solid #39556e;border-radius:12px;
+  padding:9px 13px;font-size:.78rem;color:#b5f8ef;
+}
+.sat.one{top:13%;right:0}
+.sat.two{bottom:16%;left:0}
+@keyframes float{50%{transform:translateY(-12px)}}
+section{padding:70px 0;scroll-margin-top:85px}
+.section-top{color:var(--accent);text-transform:uppercase;letter-spacing:.19em;font-size:.78rem;font-weight:800}
+.section-title{font-size:clamp(2rem,4vw,3rem);line-height:1.15;letter-spacing:-.035em;margin:10px 0 18px}
+.section-desc{color:var(--muted);max-width:760px}
+.stats,.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.card,.stat,.timeline-item{
+  border:1px solid #27374f;
+  background:linear-gradient(145deg,#142039,#10182a);
+  border-radius:17px;padding:25px;
+}
+.stat strong{display:block;color:var(--accent);font-size:1.9rem}
+.stat span,.card p,.timeline-item p{color:var(--muted)}
+.card h3{margin:10px 0;font-size:1.17rem}
+.chipset{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+.chip{
+  border:1px solid #344860;border-radius:100px;
+  padding:6px 12px;font-size:.8rem;
+  color:#c9def4;background:#16243a;
+}
+.icon{font-size:1.7rem}
+.timeline{display:grid;gap:16px;margin-top:28px}
+.timeline-item{border-left:3px solid var(--accent)}
+.timeline-item h3{margin:0}
+.tag{font-size:.78rem;color:var(--accent);font-weight:700;letter-spacing:.05em}
+.note,.tiny{color:#9facbf;font-size:.85rem}
+.contact{
+  background:linear-gradient(110deg,#182b48,#13243a);
+  border:1px solid #2a5365;border-radius:22px;
+  padding:38px;margin-top:24px;
+}
+footer{padding:30px 0 45px;border-top:1px solid #243047;color:#9baac2;font-size:.85rem;text-align:center}
+.architecture{
+  margin-top:30px;padding:26px;
+  border:1px solid #2c4560;border-radius:22px;
+  background:radial-gradient(circle at 50% 0,#1a3354,#0f192b 72%);
+  overflow:hidden;
+}
+.flowgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:9px}
+.flowstep{
+  position:relative;border:1px solid #36516b;
+  background:#172740;border-radius:13px;
+  padding:18px 10px;text-align:center;min-width:0;
+}
+.flowstep:not(:last-child):after{
+  content:'›';position:absolute;right:-10px;top:38%;
+  z-index:1;color:var(--accent);font-size:1.35rem;font-weight:900;
+}
+.flowstep svg{
+  width:40px;height:40px;stroke:var(--accent);
+  stroke-width:1.65;fill:none;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+.flowstep strong{display:block;margin-top:8px;font-size:.82rem}
+.flowstep small{display:block;color:var(--muted);font-size:.69rem;line-height:1.4;margin-top:5px}
+.archfooter{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-top:20px;color:#91a7c4;font-size:.78rem}
+.pulse{display:inline-block;width:8px;height:8px;background:var(--accent);border-radius:50%;margin-right:6px;box-shadow:0 0 12px var(--accent)}
+.feature{
+  border:1px solid #334a67;border-radius:18px;padding:23px;
+  background:linear-gradient(130deg,#182a43,#111b30);margin-top:22px;
+}
+.feature h3{margin:0 0 8px}
+.feature p{margin:0;color:var(--muted)}
+.empty{color:#9facbf;border:1px dashed #334960;border-radius:13px;padding:18px;margin-top:14px}
+.editor{
+  display:none;background:#0d1729;border:1px solid #3e6073;
+  border-radius:18px;padding:24px;margin:25px 0;
+}
+.editor.open{display:block}
+.editor label{display:block;margin:12px 0 5px;font-size:.86rem;color:#cbdaf0}
+.editor input,.editor textarea{
+  display:block;width:100%;padding:10px;
+  border:1px solid #39516c;background:#101e33;
+  color:white;border-radius:9px;
+}
+.editor textarea{min-height:110px;resize:vertical}
+.editor .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.editor .helper{font-size:.8rem;color:#a5b4cb}
+.pill{
+  display:inline-flex;align-items:center;gap:6px;
+  border:1px solid #36516b;border-radius:100px;
+  padding:5px 10px;font-size:.74rem;
+  color:#bceeea;background:#102b37;
+}
+.privacy-banner{
+  position:fixed;bottom:15px;left:50%;
+  transform:translateX(-50%);
+  width:min(650px,calc(100% - 24px));
+  background:#182840;border:1px solid #517185;
+  padding:18px;border-radius:15px;
+  z-index:100;box-shadow:0 10px 40px #0008;
+}
+.privacy-banner p{font-size:.85rem;color:#c9d7e8;margin:7px 0}
+.privacy-banner .actions{margin-top:12px}
+.privacy-banner[hidden]{display:none}
+@media(max-width:860px){
+  .flowgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .flowstep:nth-child(3):after{display:none}
+  .hero{grid-template-columns:1fr;gap:8px}
+  .visual{min-height:300px}
+  .orb{width:250px}.orb span{font-size:4.7rem}
+}
+@media(max-width:620px){
+  nav{align-items:flex-start;flex-wrap:wrap;padding:14px 0}
+  .mobile-toggle{
+    display:block;margin-left:auto;background:#16243a;
+    color:white;border:1px solid #39516c;
+    border-radius:8px;padding:6px 10px;
+  }
+  .links{display:none;width:100%;padding-bottom:9px}
+  .links.show{display:flex;flex-direction:column;gap:12px}
+  .hero{padding:60px 0 30px;min-height:auto}
+  .hero h1{font-size:clamp(3.1rem,12vw,5rem)}
+  .stats,.cards{grid-template-columns:1fr}
+  .flowgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .flowstep:nth-child(3):after{display:block}
+  .flowstep:nth-child(even):after{display:none}
+  .architecture{padding:15px}
+  .editor .row{grid-template-columns:1fr}
+  section{padding:50px 0}
+  .contact{padding:23px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}
+}
+</style>
+</head>
+
+<body>
+<header>
+<nav class="wrap" aria-label="Main navigation">
+<a class="logo" href="#home">AK<span>V.</span></a>
+<button class="mobile-toggle" id="menuToggle" aria-expanded="false">☰ Menu</button>
+<div class="links" id="navLinks">
+<a href="#about">About</a>
+<a href="#pipeline">Data Flow</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#certifications">Credentials</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+
+<main><div class="wrap">
+
+<section class="hero" id="home">
+<div>
+<div class="eyebrow">Engineering data into decisions</div>
+<h1><span class="line">DATA</span><span class="line">ENGINEER.</span></h1>
+<h2 id="displayName">Anil Kumar Vasantha</h2>
+<p id="tagline"></p>
+<div class="actions">
+<a class="btn primary" href="#pipeline">Explore Data Flow ↗</a>
+<a class="btn" href="#projects">View Projects</a>
+</div>
+<div class="chipset"><span class="pill">● Available for professional connections</span></div>
+</div>
+<div class="visual" aria-hidden="true">
+<div class="orb"><span>AKV</span></div>
+<div class="sat one">⚡ ETL / ELT</div>
+<div class="sat two">◈ Cloud Data</div>
+</div>
+</section>
+
+<section id="about">
+<div class="section-top">01 / About</div>
+<h2 class="section-title">Engineering data that delivers impact.</h2>
+<p class="section-desc" id="aboutText"></p>
+<div class="stats">
+<div class="stat"><strong id="experienceYears">—</strong><span>Professional experience · automatically updated</span></div>
+<div class="stat"><strong>ETL / ELT</strong><span>From ingestion to curated data</span></div>
+<div class="stat"><strong>Cloud</strong><span>Distributed processing & orchestration</span></div>
+</div>
+</section>
+
+<section id="pipeline">
+<div class="section-top">02 / End-to-End Architecture</div>
+<h2 class="section-title">From client requirements to trusted delivery.</h2>
+<p class="section-desc">A reference architecture illustrating a modern Data Engineering lifecycle from raw sources to business insights.</p>
+<div class="architecture">
+<div class="flowgrid">
+
+<div class="flowstep">
+<svg viewBox="0 0 48 48"><rect x="5" y="7" width="38" height="27" rx="4"/><path d="M17 40h14M24 34v6M12 15h14M12 21h22"/></svg>
+<strong>Client & Sources</strong>
+<small>Requirements · APIs · DB · Files</small>
+</div>
+
+<div class="flowstep">
+<svg viewBox="0 0 48 48"><rect x="5" y="9" width="15" height="12" rx="2"/><rect x="28" y="27" width="15" height="12" rx="2"/><path d="M20 15h10v8m-4-4 4 4 4-4M28 33H18v-8m-4 4 4-4 4 4"/></svg>
+<strong>Ingestion</strong>
+<small>Batch · Incremental · ADF</small>
+</div>
+
+<div class="flowstep">
+<svg viewBox="0 0 48 48"><ellipse cx="24" cy="10" rx="16" ry="6"/><path d="M8 10v26c0 8 32 8 32 0V10M8 23c0 8 32 8 32 0"/></svg>
+<strong>Data Lake</strong>
+<small>Raw · Bronze · Storage</small>
+</div>
+
+<div class="flowstep">
+<svg viewBox="0 0 48 48"><rect x="6" y="7" width="36" height="34" rx="4"/><path d="M15 16l-5 6 5 6m18-12 5 6-5 6m-13 6 8-23"/></svg>
+<strong>Transform</strong>
+<small>PySpark · Clean · Model</small>
+</div>
+
+<div class="flowstep">
+<svg viewBox="0 0 48 48"><path d="M8 36h32M12 32V20h7v12m5 0V11h7v21m5 0V24h6v8"/><path d="M9 11l8-5 8 5 10-7"/></svg>
+<strong>Quality & Serve</strong>
+<small>Validate · Silver · Gold</small>
+</div>
+
+<div class="flowstep">
+<svg viewBox="0 0 48 48"><rect x="5" y="7" width="38" height="29" rx="3"/><path d="M12 29V20h6v9m5 0V13h6v16m5 0v-7h5M16 42h16M24 36v6"/></svg>
+<strong>Delivery</strong>
+<small>BI · Analytics · Business</small>
+</div>
+
+</div>
+<div class="archfooter">
+<span><span class="pulse"></span>Orchestration · Monitoring · Error Handling</span>
+<span>Security · Governance · Lineage</span>
+</div>
+</div>
+<div class="feature">
+<h3>Built for reliability, scale, and measurable outcomes.</h3>
+<p>Modern Data Engineering connects ingestion, transformation, quality validation and delivery in a traceable production workflow.</p>
+</div>
+</section>
+
+<section id="skills">
+<div class="section-top">03 / Expertise</div>
+<h2 class="section-title">My technical toolkit.</h2>
+<p class="section-desc">Technologies and engineering practices.</p>
+<div class="cards" id="skillCards"></div>
+</section>
+
+<section id="projects">
+<div class="section-top">04 / Selected Work</div>
+<h2 class="section-title">Projects & solutions.</h2>
+<div class="cards" id="projectCards"></div>
+<div class="empty" id="projectEmpty">Project case studies coming soon.</div>
+</section>
+
+<section id="experience">
+<div class="section-top">05 / Career</div>
+<h2 class="section-title">Professional experience.</h2>
+<div class="timeline" id="companyList"></div>
+<div class="empty" id="companyEmpty">Professional journey started on 4 July 2022. Company details coming soon.</div>
+</section>
+
+<section id="certifications">
+<div class="section-top">06 / Growth</div>
+<h2 class="section-title">Certifications & continuous learning.</h2>
+<div class="cards" id="certList"></div>
+<div class="empty" id="certEmpty">Certifications will appear here when added.</div>
+</section>
+
+<section id="contact">
+<div class="section-top">07 / Connect</div>
+<div class="contact">
+<h2 class="section-title">Let's build something with data.</h2>
+<p class="section-desc">Interested in collaborating or discussing Data Engineering opportunities? Let's connect.</p>
+<div class="actions" id="contactLinks"></div>
+</div>
+</section>
+
+<section id="edit-section">
+<div class="section-top">Portfolio Maintenance</div>
+<h2 class="section-title">Update your portfolio.</h2>
+<p class="section-desc">This is a local editor, not a secure administrator login. Download the updated HTML and commit it to GitHub to publish changes.</p>
+<button class="btn" id="editToggle" type="button">Open Local Content Editor</button>
+
+<div class="editor" id="editor">
+<h2>Portfolio Content Editor</h2>
+<p class="helper">Edit fields and JSON records. Do not enter passwords or confidential information.</p>
+
+<div class="row">
+<div><label for="edName">Name</label><input id="edName"></div>
+<div><label for="edStart">Career Start Date</label><input id="edStart" type="date"></div>
+</div>
+
+<label for="edTagline">Tagline</label>
+<textarea id="edTagline"></textarea>
+<label for="edAbout">About</label>
+<textarea id="edAbout"></textarea>
+
+<div class="row">
+<div><label for="edLinkedin">LinkedIn URL</label><input id="edLinkedin" type="url"></div>
+<div><label for="edGithub">GitHub URL</label><input id="edGithub" type="url"></div>
+</div>
+
+<label for="edEmail">Public Contact Email</label>
+<input id="edEmail" type="email">
+
+<label for="edSkills">Skills JSON</label>
+<textarea id="edSkills" rows="7"></textarea>
+
+<label for="edCompanies">Companies JSON</label>
+<textarea id="edCompanies" rows="7"></textarea>
+
+<label for="edProjects">Projects JSON</label>
+<textarea id="edProjects" rows="7"></textarea>
+
+<label for="edCerts">Certifications JSON</label>
+<textarea id="edCerts" rows="5"></textarea>
+
+<div class="actions">
+<button class="btn primary" id="savePreview" type="button">Preview Changes</button>
+<button class="btn" id="downloadHtml" type="button">Download Updated index.html</button>
+</div>
+<p class="helper" id="editStatus" role="status"></p>
+</div>
+</section>
+
+</div></main>
+
+<footer>
+<div class="wrap">
+© <span id="year"></span> Anil Kumar Vasantha · Built with purpose, powered by data.
+<br>
+<button class="btn" id="privacySettings" type="button">Analytics Privacy Settings</button>
+</div>
+</footer>
+
+<div class="privacy-banner" id="privacyBanner" hidden role="dialog" aria-label="Analytics privacy">
+<strong>Website Analytics</strong>
+<p>This website uses optional Google Analytics to understand visits, devices and traffic sources. You can browse without accepting analytics. Reports are available only to the site owner.</p>
+<div class="actions">
+<button class="btn primary" id="acceptAnalytics" type="button">Accept Analytics</button>
+<button class="btn" id="rejectAnalytics" type="button">Reject Analytics</button>
+</div>
+</div>
+
+<script id="portfolio-data" type="application/json">
+{
+  "name":"Anil Kumar Vasantha",
+  "role":"Data Engineer",
+  "startDate":"2022-07-04",
+  "tagline":"I build reliable data platforms — from client requirements to production-ready insights.",
+  "about":"Data Engineer focused on scalable ingestion, transformation, orchestration, data quality, and performance optimization. I enjoy building dependable data systems that connect raw sources with meaningful business outcomes.",
+  "skills":[
+    {
+      "group":"Languages & Processing",
+      "items":["Python","SQL","PySpark","Apache Spark","Spark SQL"]
+    },
+    {
+      "group":"Cloud & Orchestration",
+      "items":["Azure Data Factory","Azure Databricks","ETL / ELT","Workflow Orchestration"]
+    },
+    {
+      "group":"Engineering Practices",
+      "items":["Data Quality","Data Modeling","Delta Lake","SCD Type 2","Performance Tuning"]
+    }
+  ],
+  "companies":[],
+  "projects":[],
+  "certifications":[],
+  "linkedin":"",
+  "github":"https://github.com/VasanthaAnilKumar",
+  "email":""
+}
 </script>
-  <body><header><nav class="wrap" aria-label="Main navigation"><a class="logo" href="#home">AK<span>V.</span></a><button class="mobile-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">☰ Menu</button><div class="links" id="navLinks"><a href="#about">About</a><a href="#pipeline">Data Flow</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#certifications">Credentials</a><a href="#contact">Contact</a></div></nav></header><main><div class="wrap"><section class="hero" id="home"><div><div class="eyebrow">Engineering data into decisions</div><h1><span class="line">DATA</span><span class="line">ENGINEER.</span></h1><h2 id="displayName" style="font-size:clamp(1.5rem,3vw,2.2rem);margin:0">Anil Kumar Vasantha</h2><p id="tagline"></p><div class="actions"><a class="btn primary" href="#pipeline">Explore Data Flow ↗</a><a class="btn" href="#projects">View Projects</a></div><div class="chipset"><span class="pill">● Available for professional connections</span></div></div><div class="visual" aria-hidden="true"><div class="orb"><span>AKV</span></div><div class="sat one">⚡ ETL / ELT</div><div class="sat two">◈ Cloud Data</div></div></section><section id="about"><div class="section-top">01 / About</div><h2 class="section-title">Engineering data that delivers impact.</h2><p class="section-desc" id="aboutText"></p><div class="stats"><div class="stat"><strong id="experienceYears">—</strong><span>Professional experience · automatically updated</span></div><div class="stat"><strong>ETL / ELT</strong><span>From ingestion to curated data</span></div><div class="stat"><strong>Cloud</strong><span>Distributed processing & orchestration</span></div></div></section><section id="pipeline"><div class="section-top">02 / End-to-End Architecture</div><h2 class="section-title">From client requirements to trusted delivery.</h2><p class="section-desc">An interactive-looking architecture overview of a typical modern data engineering lifecycle. This is a reference workflow, not a claim about a specific client deployment.</p><div class="architecture"><div class="flowgrid" id="flowSteps">
-<div class="flowstep"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="7" width="38" height="27" rx="4"/><path d="M17 40h14M24 34v6M12 15h14M12 21h22"/></svg><strong>Client & Sources</strong><small>Requirements · APIs · DB · Files</small></div>
-<div class="flowstep"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="9" width="15" height="12" rx="2"/><rect x="28" y="27" width="15" height="12" rx="2"/><path d="M20 15h10v8m-4-4 4 4 4-4M28 33H18v-8m-4 4 4-4 4 4"/></svg><strong>Ingestion</strong><small>Batch · Incremental · ADF</small></div>
-<div class="flowstep"><svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="10" rx="16" ry="6"/><path d="M8 10v26c0 8 32 8 32 0V10M8 23c0 8 32 8 32 0"/></svg><strong>Data Lake</strong><small>Raw · Bronze · Storage</small></div>
-<div class="flowstep"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="7" width="36" height="34" rx="4"/><path d="M15 16l-5 6 5 6m18-12 5 6-5 6m-13 6 8-23"/></svg><strong>Transform</strong><small>PySpark · Clean · Model</small></div>
-<div class="flowstep"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 36h32M12 32V20h7v12m5 0V11h7v21m5 0V24h6v8"/><path d="M9 11l8-5 8 5 10-7"/></svg><strong>Quality & Serve</strong><small>Validate · Silver · Gold</small></div>
-<div class="flowstep"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="7" width="38" height="29" rx="3"/><path d="M12 29V20h6v9m5 0V13h6v16m5 0v-7h5M16 42h16M24 36v6"/></svg><strong>Delivery</strong><small>BI · Analytics · Business</small></div>
-</div><div class="archfooter"><span><span class="pulse"></span>Orchestration · Monitoring · Error handling across every stage</span><span>Security · Governance · Lineage</span></div></div><div class="feature"><h3>Built for reliability, scale, and measurable outcomes.</h3><p>From understanding the client's data needs to production deployment, modern data engineering connects ingestion, transformations, quality controls, and consumption in a traceable flow.</p></div></section><section id="skills"><div class="section-top">03 / Expertise</div><h2 class="section-title">My technical toolkit.</h2><p class="section-desc">A focused view of the tools and practices I work with and continue to develop.</p><div class="cards" id="skillCards"></div></section><section id="projects"><div class="section-top">04 / Selected Work</div><h2 class="section-title">Projects & solutions.</h2><p class="section-desc">Real projects and outcomes will appear here once added through the portfolio editor.</p><div class="cards" id="projectCards"></div><div class="empty" id="projectEmpty">Project case studies coming soon. Add a verified project to highlight the business problem, pipeline architecture, technology stack, and results.</div></section><section id="experience"><div class="section-top">05 / Career</div><h2 class="section-title">Professional experience.</h2><div class="timeline" id="companyList"></div><div class="empty" id="companyEmpty">Professional journey started on 4 July 2022. Company names, roles, and dates can be added when confirmed.</div></section><section id="certifications"><div class="section-top">06 / Growth</div><h2 class="section-title">Certifications & continuous learning.</h2><div class="cards" id="certList"></div><div class="empty" id="certEmpty">Verified certifications and credentials will be displayed here when added.</div></section><section id="contact"><div class="section-top">07 / Connect</div><div class="contact"><h2 class="section-title">Let's build something with data.</h2><p class="section-desc">Interested in collaborating or discussing Data Engineering opportunities? Let's connect.</p><div class="actions" id="contactLinks"></div><p class="note">This website is public. Do not include confidential client information, passwords, or private datasets.</p></div></section><section id="edit-section"><div class="section-top">Portfolio maintenance</div><h2 class="section-title">Update your portfolio without redesigning it.</h2><p class="section-desc">The editor works locally in your browser. To publish changes, download the updated HTML and replace <code>index.html</code> in your hosting repository. This is not a password-protected online admin panel.</p><button class="btn" id="editToggle" type="button">Open Local Content Editor</button><div class="editor" id="editor"><h2>Portfolio Content Editor</h2><p class="helper">Edit fields or JSON records. Download an updated <code>index.html</code> when finished. Never enter secrets or confidential client details.</p><div class="row"><div><label for="edName">Name</label><input id="edName"></div><div><label for="edStart">Career start date</label><input id="edStart" type="date"></div></div><label for="edTagline">Tagline</label><textarea id="edTagline"></textarea><label for="edAbout">About</label><textarea id="edAbout"></textarea><div class="row"><div><label for="edLinkedin">LinkedIn URL</label><input id="edLinkedin" type="url" placeholder="https://linkedin.com/in/..."></div><div><label for="edGithub">GitHub URL</label><input id="edGithub" type="url"></div></div><label for="edEmail">Public contact email (optional)</label><input id="edEmail" type="email"><label for="edSkills">Skills JSON — groups and items</label><textarea id="edSkills" rows="7"></textarea><label for="edCompanies">Companies JSON — company, role, start, end, description</label><textarea id="edCompanies" rows="7"></textarea><label for="edProjects">Projects JSON — title, category, description, stack (array)</label><textarea id="edProjects" rows="7"></textarea><label for="edCerts">Certifications JSON — name, issuer, year</label><textarea id="edCerts" rows="5"></textarea><div class="actions"><button class="btn primary" type="button" id="savePreview">Preview Changes</button><button class="btn" type="button" id="downloadHtml">Download Updated index.html</button></div><p class="helper" id="editStatus" role="status"></p></div></section></div></main><footer><div class="wrap">© <span id="year"></span> Anil Kumar Vasantha · Built with purpose, powered by data.</div></footer><script id="portfolio-data" type="application/json">{"name": "Anil Kumar Vasantha", "role": "Data Engineer", "startDate": "2022-07-04", "tagline": "I build reliable data platforms — from client requirements to production-ready insights.", "about": "Data Engineer focused on scalable ingestion, transformation, orchestration, data quality, and performance optimization. I enjoy building dependable data systems that connect raw sources with meaningful business outcomes.", "skills": [{"group": "Languages & Processing", "items": ["Python", "SQL", "PySpark", "Apache Spark", "Spark SQL"]}, {"group": "Cloud & Orchestration", "items": ["Azure Data Factory", "Azure Databricks", "ETL / ELT", "Workflow Orchestration"]}, {"group": "Engineering Practices", "items": ["Data Quality", "Data Modeling", "Delta Lake", "SCD Type 2", "Performance Tuning"]}], "companies": [], "projects": [], "certifications": [], "linkedin": "", "github": "https://github.com/VasanthaAnilKumar", "email": ""}</script><script>
-(function(){'use strict';const $=id=>document.getElementById(id);let data=JSON.parse($('portfolio-data').textContent);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const safeUrl=s=>{try{let u=new URL(s);return ['https:','http:'].includes(u.protocol)?u.href:''}catch{return ''}};function experience(start){let s=new Date(start+'T00:00:00'),n=new Date();if(!Number.isFinite(s.getTime())||s>n)return '—';let y=n.getFullYear()-s.getFullYear(),m=n.getMonth()-s.getMonth();if(n.getDate()<s.getDate())m--;if(m<0){y--;m+=12}return y+' yr'+(y===1?'':'s')+' '+m+' mo'}function render(){ $('displayName').textContent=data.name;$('tagline').textContent=data.tagline;$('aboutText').textContent=data.about;$('experienceYears').textContent=experience(data.startDate);$('skillCards').innerHTML=(data.skills||[]).map((s,i)=>'<article class="card"><div class="icon">'+['⌘','☁','◇','◈'][i%4]+'</div><h3>'+esc(s.group)+'</h3><div class="chipset">'+(s.items||[]).map(x=>'<span class="chip">'+esc(x)+'</span>').join('')+'</div></article>').join('');$('projectCards').innerHTML=(data.projects||[]).map(x=>'<article class="card"><span class="tag">'+esc(x.category||'PROJECT')+'</span><h3>'+esc(x.title)+'</h3><p>'+esc(x.description)+'</p><div class="chipset">'+(x.stack||[]).map(t=>'<span class="chip">'+esc(t)+'</span>').join('')+'</div></article>').join('');$('projectEmpty').hidden=!!(data.projects||[]).length;$('companyList').innerHTML=(data.companies||[]).map(x=>'<article class="timeline-item"><span class="tag">'+esc(x.start||'')+' — '+esc(x.end||'Present')+'</span><h3>'+esc(x.role||'Data Engineer')+' · '+esc(x.company)+'</h3><p>'+esc(x.description||'')+'</p></article>').join('');$('companyEmpty').hidden=!!(data.companies||[]).length;$('certList').innerHTML=(data.certifications||[]).map(x=>'<article class="card"><span class="tag">'+esc(x.year||'')+'</span><h3>'+esc(x.name)+'</h3><p>'+esc(x.issuer||'')+'</p></article>').join('');$('certEmpty').hidden=!!(data.certifications||[]).length;let links=[];if(safeUrl(data.linkedin))links.push('<a class="btn primary" href="'+esc(safeUrl(data.linkedin))+'" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>');if(safeUrl(data.github))links.push('<a class="btn" href="'+esc(safeUrl(data.github))+'" target="_blank" rel="noopener noreferrer">GitHub ↗</a>');if(data.email&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))links.push('<a class="btn" href="mailto:'+encodeURIComponent(data.email)+'">Email ↗</a>');$('contactLinks').innerHTML=links.join('')||'<p>Professional contact details coming soon.</p>'}function fill(){for(let [id,key] of [['edName','name'],['edStart','startDate'],['edTagline','tagline'],['edAbout','about'],['edLinkedin','linkedin'],['edGithub','github'],['edEmail','email']])$(id).value=data[key]||'';for(let [id,key] of [['edSkills','skills'],['edCompanies','companies'],['edProjects','projects'],['edCerts','certifications']])$(id).value=JSON.stringify(data[key]||[],null,2)}function read(){let next={...data};for(let [id,key] of [['edName','name'],['edStart','startDate'],['edTagline','tagline'],['edAbout','about'],['edLinkedin','linkedin'],['edGithub','github'],['edEmail','email']])next[key]=$(id).value.trim();for(let [id,key] of [['edSkills','skills'],['edCompanies','companies'],['edProjects','projects'],['edCerts','certifications']]){let v=JSON.parse($(id).value);if(!Array.isArray(v))throw Error(key+' must be a JSON array');next[key]=v}if(!/^\d{4}-\d{2}-\d{2}$/.test(next.startDate))throw Error('Enter a valid career start date');return next}function apply(){try{data=read();render();$('editStatus').textContent='Preview updated. Download the HTML to keep and publish your changes.';return true}catch(e){$('editStatus').textContent='Please correct your input: '+e.message;return false}}$('menuToggle').onclick=()=>{let on=$('navLinks').classList.toggle('show');$('menuToggle').setAttribute('aria-expanded',String(on))};$('navLinks').querySelectorAll('a').forEach(a=>a.onclick=()=>{$('navLinks').classList.remove('show');$('menuToggle').setAttribute('aria-expanded','false')});$('editToggle').onclick=()=>{let open=$('editor').classList.toggle('open');$('editToggle').textContent=open?'Close Local Content Editor':'Open Local Content Editor';if(open)fill()};$('savePreview').onclick=apply;$('downloadHtml').onclick=()=>{if(!apply())return;let json=JSON.stringify(data).replace(/</g,'\\u003c');let documentHtml='<!doctype html>'+document.documentElement.outerHTML;documentHtml=documentHtml.replace(/(<script id="portfolio-data" type="application\/json">)[\s\S]*?(<\/script>)/,(_,a,b)=>a+json+b);let blob=new Blob([documentHtml],{type:'text/html;charset=utf-8'});let url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='index.html';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);$('editStatus').textContent='Downloaded index.html. Upload it to replace the existing file on your host.'};$('year').textContent=new Date().getFullYear();render()})();
-</script></body></html>
+
+<script>
+(function(){
+'use strict';
+
+const $=id=>document.getElementById(id);
+let data=JSON.parse($('portfolio-data').textContent);
+
+function esc(s){
+  return String(s??'').replace(/[&<>"']/g,c=>({
+    '&':'&amp;','<':'&lt;','>':'&gt;',
+    '"':'&quot;',"'":'&#39;'
+  }[c]));
+}
+
+function safeUrl(s){
+  try{
+    const u=new URL(s);
+    return ['https:','http:'].includes(u.protocol)?u.href:'';
+  }catch{return ''}
+}
+
+function experience(start){
+  const s=new Date(start+'T00:00:00');
+  const n=new Date();
+  if(!Number.isFinite(s.getTime())||s>n)return '—';
+  let y=n.getFullYear()-s.getFullYear();
+  let m=n.getMonth()-s.getMonth();
+  if(n.getDate()<s.getDate())m--;
+  if(m<0){y--;m+=12}
+  return y+' yr'+(y===1?'':'s')+' '+m+' mo';
+}
+
+function render(){
+  $('displayName').textContent=data.name;
+  $('tagline').textContent=data.tagline;
+  $('aboutText').textContent=data.about;
+  $('experienceYears').textContent=experience(data.startDate);
+
+  $('skillCards').innerHTML=(data.skills||[]).map((s,i)=>
+    '<article class="card"><div class="icon">'+
+    ['⌘','☁','◇','◈'][i%4]+
+    '</div><h3>'+esc(s.group)+'</h3><div class="chipset">'+
+    (s.items||[]).map(x=>'<span class="chip">'+esc(x)+'</span>').join('')+
+    '</div></article>'
+  ).join('');
+
+  $('projectCards').innerHTML=(data.projects||[]).map(x=>
+    '<article class="card"><span class="tag">'+esc(x.category||'PROJECT')+
+    '</span><h3>'+esc(x.title)+'</h3><p>'+esc(x.description)+
+    '</p><div class="chipset">'+
+    (x.stack||[]).map(t=>'<span class="chip">'+esc(t)+'</span>').join('')+
+    '</div></article>'
+  ).join('');
+
+  $('projectEmpty').hidden=!!(data.projects||[]).length;
+
+  $('companyList').innerHTML=(data.companies||[]).map(x=>
+    '<article class="timeline-item"><span class="tag">'+
+    esc(x.start||'')+' — '+esc(x.end||'Present')+
+    '</span><h3>'+esc(x.role||'Data Engineer')+' · '+
+    esc(x.company)+'</h3><p>'+esc(x.description||'')+
+    '</p></article>'
+  ).join('');
+
+  $('companyEmpty').hidden=!!(data.companies||[]).length;
+
+  $('certList').innerHTML=(data.certifications||[]).map(x=>
+    '<article class="card"><span class="tag">'+esc(x.year||'')+
+    '</span><h3>'+esc(x.name)+'</h3><p>'+
+    esc(x.issuer||'')+'</p></article>'
+  ).join('');
+
+  $('certEmpty').hidden=!!(data.certifications||[]).length;
+
+  let links=[];
+  if(safeUrl(data.linkedin))
+    links.push('<a class="btn primary" href="'+esc(safeUrl(data.linkedin))+
+      '" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>');
+  if(safeUrl(data.github))
+    links.push('<a class="btn" href="'+esc(safeUrl(data.github))+
+      '" target="_blank" rel="noopener noreferrer">GitHub ↗</a>');
+  if(data.email&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.t
